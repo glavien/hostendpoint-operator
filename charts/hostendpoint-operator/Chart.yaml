@@ -1,0 +1,16 @@
+apiVersion: v2
+name: hostendpoint-operator
+description: A Kubernetes operator to automatically manage Calico HostEndpoints for cluster nodes.
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - calico
+  - networking
+  - security
+  - operator
+  - hostendpoint
+maintainers:
+  - name: Glavien Software
+    email: stepa@glavien.io
+    url: https://gameback.cloud

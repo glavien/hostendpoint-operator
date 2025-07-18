@@ -1,0 +1,2 @@
+kubernetes==28.1.0
+deepdiff==6.7.1

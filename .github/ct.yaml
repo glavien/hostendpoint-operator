@@ -1,0 +1,7 @@
+chart-dirs:
+  - charts
+
+remote: origin
+target-branch: main
+
+check-version-increment: false # We don't need to enforce version bumps on every PR

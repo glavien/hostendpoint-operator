@@ -1,0 +1,7 @@
+# Patterns to ignore when building packages.
+# This will prevent Helm from trying to process READMEs, notes, etc.
+.DS_Store
+.git/
+.gitignore
+ci/
+README.md

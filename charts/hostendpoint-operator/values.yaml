@@ -1,0 +1,72 @@
+# Default values for hostendpoint-operator chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  # The repository where the operator image is stored.
+  repository: ghcr.io/glavien/hostendpoint-operator
+  # The image tag to pull. It's recommended to use immutable tags.
+  tag: "v1.0.0"
+  # The image pull policy.
+  pullPolicy: IfNotPresent
+
+# Name of the ServiceAccount to use.
+# If not set and serviceAccount.create is true, a name is generated using the fullname template.
+serviceAccount:
+  # Specifies whether a service account should be created.
+  create: true
+  # The name of the service account to use.
+  # If not set, a name is generated using the fullname template.
+  name: ""
+  # Annotations to add to the service account.
+  annotations: {}
+
+# Configuration for the operator logic, passed as environment variables.
+config:
+  # Log level for the operator. Can be DEBUG, INFO, WARNING, ERROR, CRITICAL.
+  logLevel: "INFO"
+  # How often, in seconds, the operator should scan for changes.
+  scanIntervalSeconds: 60
+  # The ID used to label resources created by this operator.
+  operatorId: "glavien.io/hostendpoint-operator"
+
+# Pod-level security context.
+# Defines security settings for all containers in the pod.
+podSecurityContext:
+  # Run as a non-root user.
+  runAsNonRoot: true
+  # The user ID to run the container as.
+  runAsUser: 1001
+  # The group ID to run the container as.
+  runAsGroup: 1001
+  # Filesystem group.
+  fsGroup: 1001
+
+# Container-level security context.
+# Defines security settings for the main operator container.
+securityContext:
+  # Disallow privilege escalation.
+  allowPrivilegeEscalation: false
+  # Run the container with a read-only root filesystem.
+  readOnlyRootFilesystem: true
+  # Drop all capabilities and add none back.
+  capabilities:
+    drop:
+      - "ALL"
+
+# Resource requests and limits for the operator pod.
+# It's highly recommended to set these values to ensure stable performance.
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+
+# Node selector, affinity, and tolerations for pod scheduling.
+nodeSelector: {}
+tolerations: []
+affinity: {}
