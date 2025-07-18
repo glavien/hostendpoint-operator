@@ -1,7 +1,7 @@
 # Calico HostEndpoint Operator
 
-[![CI Checks](https://github.com/glavien-io/hostendpoint-operator/actions/workflows/ci.yaml/badge.svg)](https://github.com/glavien-io/hostendpoint-operator/actions/workflows/ci.yaml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/glavien-io/hostendpoint-operator)](https://github.com/glavien-io/hostendpoint-operator/releases/latest)
+[![CI Checks](https://github.com/glavien/hostendpoint-operator/actions/workflows/ci.yaml/badge.svg)](https://github.com/glavien/hostendpoint-operator/actions/workflows/ci.yaml)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/glavien/hostendpoint-operator)](https://github.com/glavien/hostendpoint-operator/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple, lightweight Kubernetes operator that automatically creates and manages [Calico HostEndpoint](https://docs.tigera.io/calico/latest/reference/resources/hostendpoint) resources for every node in your cluster.
